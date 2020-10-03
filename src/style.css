@@ -35,3 +35,7 @@ li {
   font-size: 25px;
   font-weight: bold;
 }
+
+.col-3 {
+  width: 100%;
+}
