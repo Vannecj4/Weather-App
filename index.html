@@ -1,119 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="src/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <title>Weather App</title>
-  </head>
+  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
-  <body>
-    <div class="container">
-      <div class="weatherborder">
-        <div class="row">
-          <div class="col-9">
-            <form id="search form"></form>
-            <input
-              type="search"
-              placeholder="type the city"
-              class="form-control"
-            />
-          </div class="col-3">
-          <input type="submit" value="Search" class="btn btn-primary" />
-        </div>
+  <title>Weather App</title>
+</head>
 
-        <p class="main">
-          <span class="city"> Amsterdam </span>
-
-          <br />
-          <span class="day"> Saturday - 18:53 </span>
-        </p>
-
-        <hr />
-
-        <div class="row">
-          <div class="col-4">
-            <ul>
-              <li>Raining</li>
-              <li>Real Feel 10°C</li>
-            </ul>
-          </div>
-          <div class="col-4">
-            <img
-              src="https://c.tadst.com/gfx/w/svg/wt-18.svg"
-              alt="Clear"
-              class="mainimage"
-            />
-            <span id="units"> 15 </span>
-            <span class="grados">°C | °F </span>
-          </div>
-
-          <div class="col-4">
-            <ul>
-              <li>Chance of rain: 65%</li>
-              <li>Humidity 90%</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr />
-
-        <div class="row">
-          <div class="col-3">
-            <div class="day1">
-              Sunday
-              <img
-                src="https://c.tadst.com/gfx/w/svg/wt-33.svg"
-                alt="day4"
-                class="imageone"
-              />
-            </div>
-          </div>
-          <div class="col-3">
-            Monday
-            <img
-              src="https://c.tadst.com/gfx/w/svg/wt-33.svg"
-              alt="day4"
-              class="imagetwo"
-            />
-          </div>
-
-          <div class="col-3">
-            Tuesday
-            <img
-              src="https://c.tadst.com/gfx/w//svg/wt-1.svg"
-              alt="day4"
-              class="imagetree"
-            />
-          </div>
-          <div class="col-3">
-            Wednesday
-            <img
-              src="https://c.tadst.com/gfx/w//svg/wt-1.svg"
-              alt="day4"
-              class="image4"
-            />
-          </div>
-        </div>
-
-        <small>
-          <a href="https://github.com/Vannecj4/Weather-App" target="_blank"
-            >Open-source code</a
-          >
-          by Vanne Cerdas
-        </small>
+<body>
+  <div class="container">
+    <div class="weatherborder">
+      <div class="row">
+        <div class="col-9">
+          <form id="search-form"></form>
+          <input type="search" placeholder="type the city" class="form-control" id="cityname" />
+        </div class="col-3">
+        <input type="submit" value="Search" class="btn btn-primary" />
       </div>
+
+      <p class="main">
+        <span class="city"> Amsterdam </span>
+
+        <br />
+        <span class="day"> Saturday - 18:53 </span>
+      </p>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-4">
+          <ul>
+            <li>Raining</li>
+            <li>Real Feel 10°C</li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <img src="https://c.tadst.com/gfx/w/svg/wt-18.svg" alt="Clear" class="mainimage" />
+          <span id="units"> 15 </span>
+          <span class="grados">°C | °F </span>
+        </div>
+
+        <div class="col-4">
+          <ul>
+            <li>Chance of rain: 65%</li>
+            <li>Humidity 90%</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-3">
+          <div class="day1">
+            Sunday
+            <img src="https://c.tadst.com/gfx/w/svg/wt-33.svg" alt="day4" class="imageone" />
+          </div>
+        </div>
+        <div class="col-3">
+          Monday
+          <img src="https://c.tadst.com/gfx/w/svg/wt-33.svg" alt="day4" class="imagetwo" />
+        </div>
+
+        <div class="col-3">
+          Tuesday
+          <img src="https://c.tadst.com/gfx/w//svg/wt-1.svg" alt="day4" class="imagetree" />
+        </div>
+        <div class="col-3">
+          Wednesday
+          <img src="https://c.tadst.com/gfx/w//svg/wt-1.svg" alt="day4" class="image4" />
+        </div>
+      </div>
+
+      <small>
+        <a href="https://github.com/Vannecj4/Weather-App" target="_blank">Open-source code</a>
+        by Vanne Cerdas
+      </small>
     </div>
-    <script src="src/app.js"></script>
-  </body>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+
 </html>
