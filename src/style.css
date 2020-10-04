@@ -17,7 +17,7 @@
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
-  color: #3d75d7;
+  color: #549edf;
 }
 
 li {
@@ -41,5 +41,5 @@ li {
 }
 
 .imageone {
-  margin-right: 600px;
+  margin: 10px 10px;
 }
