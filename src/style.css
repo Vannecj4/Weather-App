@@ -40,3 +40,11 @@ li {
   width: 25%;
   text-align: center;
 }
+
+.units {
+  font-size: 30px;
+}
+.mainimage {
+  width: 50px;
+  height: auto;
+}
