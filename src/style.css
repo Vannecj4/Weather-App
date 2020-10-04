@@ -37,9 +37,6 @@ li {
 }
 
 .col-3 {
-  width: 100%;
-}
-
-.imageone {
-  margin: 10px 10px;
+  width: 25%;
+  text-align: center;
 }
