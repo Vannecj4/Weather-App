@@ -22,6 +22,7 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
+  console.log(response.data);
   let temperatureElem = document.getElementById("units");
   let humidityElement = document.getElementById("humidity");
   let feelElement = document.getElementById("realfeel");
@@ -29,6 +30,7 @@ function showTemperature(response) {
   let stateElement = document.getElementById("weatherstate");
   let cityName = document.getElementById("city");
   let dayElement = document.getElementById("day");
+  let iconElement = document.getElementById("mainicon");
   temperatureElem.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
   feelElement.innerHTML = Math.round(response.data.main.feels_like);
@@ -36,6 +38,10 @@ function showTemperature(response) {
   stateElement.innerHTML = response.data.weather[0].main;
   cityName.innerHTML = response.data.name;
   dayElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 }
 
 function testname(event) {
