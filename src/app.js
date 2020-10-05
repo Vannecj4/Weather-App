@@ -7,6 +7,7 @@ function showTemperature(response) {
 function testname(event) {
   event.preventDefault();
   let cityname = document.querySelector("#cityname");
+  search(cityname.value);
   console.log(cityname.value);
 }
 
