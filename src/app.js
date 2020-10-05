@@ -1,3 +1,11 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let day = date.getDay();
+  return `${day}  ${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
   console.log(response.data);
   let temperatureElem = document.getElementById("units");
@@ -6,12 +14,14 @@ function showTemperature(response) {
   let windElement = document.getElementById("wind");
   let stateElement = document.getElementById("weatherstate");
   let cityName = document.getElementById("city");
+  let dayElement = document.getElementById("day");
   temperatureElem.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
   feelElement.innerHTML = Math.round(response.data.main.feels_like);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   stateElement.innerHTML = response.data.weather[0].main;
   cityName.innerHTML = response.data.name;
+  dayElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function testname(event) {
