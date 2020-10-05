@@ -2,11 +2,12 @@ function showTemperature(response) {
   console.log(response.data);
   let temperatureElem = document.getElementById("units");
   let humidityElement = document.getElementById("humidity");
-  let FeelElement = document.getElementById("realfeel");
+  let feelElement = document.getElementById("realfeel");
   let chanceElement = document.getElementById("chance");
-  let StateElement = document.getElementById("weatherstate");
+  let stateElement = document.getElementById("weatherstate");
   temperatureElem.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
+  feelElement.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 function testname(event) {
