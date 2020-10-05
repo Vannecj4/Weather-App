@@ -21,6 +21,19 @@ function formatDate(timestamp) {
   return `${day}  ${hours}:${minutes}`;
 }
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0 ${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showTemperature(response) {
   let temperatureElem = document.getElementById("units");
   let humidityElement = document.getElementById("humidity");
@@ -48,13 +61,33 @@ function displayForecast(response) {
   let forecast = response.data.list[0];
   console.log(forecast);
   forecastElement.innerHTML = `
-  <div class="col-3">
+  <div class="col-2">
           <h3>
-            12:00
+            ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="" alt="day1" id="day1">
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
-          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 15
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
+          </div>
+        </div>`;
+
+  forecast = response.data.list[1];
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="col-2">
+          <h3>
+            ${formatHours(forecast.dt * 1000)}
+          </h3>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
           </div>
         </div>`;
 }
