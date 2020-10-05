@@ -52,3 +52,11 @@ li {
 .row2 {
   display: flex;
 }
+
+.time {
+  text-align: center;
+}
+
+.weather-forecast-temp {
+  text-align: center;
+}

@@ -62,7 +62,7 @@ function displayForecast(response) {
   console.log(forecast);
   forecastElement.innerHTML = `
   <div class="col-2">
-          <h3>
+          <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
           <img src="http://openweathermap.org/img/wn/${
@@ -79,7 +79,75 @@ function displayForecast(response) {
     forecastElement.innerHTML +
     `
   <div class="col-2">
-          <h3>
+          <h3 class="time">
+            ${formatHours(forecast.dt * 1000)}
+          </h3>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
+          </div>
+        </div>`;
+
+  forecast = response.data.list[2];
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="col-2">
+          <h3 class= "time">
+            ${formatHours(forecast.dt * 1000)}
+          </h3>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
+          </div>
+        </div>`;
+
+  forecast = response.data.list[3];
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="col-2">
+          <h3 class="time">
+            ${formatHours(forecast.dt * 1000)}
+          </h3>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
+          </div>
+        </div>`;
+
+  forecast = response.data.list[4];
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="col-2">
+          <h3 class="time">
+            ${formatHours(forecast.dt * 1000)}
+          </h3>
+          <img src="http://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> ${Math.round(forecast.main.temp_max)}° </strong> 
+            ${Math.round(forecast.main.temp_min)}° 
+          </div>
+        </div>`;
+
+  forecast = response.data.list[5];
+  forecastElement.innerHTML =
+    forecastElement.innerHTML +
+    `
+  <div class="col-2">
+          <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
           <img src="http://openweathermap.org/img/wn/${
