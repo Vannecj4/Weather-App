@@ -52,7 +52,7 @@ function showTemperature(response) {
   dayElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 
@@ -65,7 +65,7 @@ function displayForecast(response) {
           <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -82,7 +82,7 @@ function displayForecast(response) {
           <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -99,7 +99,7 @@ function displayForecast(response) {
           <h3 class= "time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -116,7 +116,7 @@ function displayForecast(response) {
           <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -133,7 +133,7 @@ function displayForecast(response) {
           <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -150,7 +150,7 @@ function displayForecast(response) {
           <h3 class="time">
             ${formatHours(forecast.dt * 1000)}
           </h3>
-          <img src="http://openweathermap.org/img/wn/${
+          <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
           }@2x.png" alt="day1" id="day1">
           <div class="weather-forecast-temp">
@@ -165,7 +165,7 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 
-  apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&mode=json&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
