@@ -31,7 +31,7 @@ li {
 .row {
   padding: 20px;
 }
-.city {
+#city {
   font-size: 25px;
   font-weight: bold;
 }

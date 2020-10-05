@@ -5,10 +5,13 @@ function showTemperature(response) {
   let feelElement = document.getElementById("realfeel");
   let windElement = document.getElementById("wind");
   let stateElement = document.getElementById("weatherstate");
+  let cityName = document.getElementById("city");
   temperatureElem.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
   feelElement.innerHTML = Math.round(response.data.main.feels_like);
-  windElement.innerHTML = response.data.wind.speed;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  stateElement.innerHTML = response.data.weather[0].main;
+  cityName.innerHTML = response.data.name;
 }
 
 function testname(event) {
