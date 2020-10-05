@@ -1,7 +1,12 @@
 function showTemperature(response) {
-  console.log(response.data.main.temp);
+  console.log(response.data);
   let temperatureElem = document.getElementById("units");
+  let humidityElement = document.getElementById("humidity");
+  let FeelElement = document.getElementById("realfeel");
+  let chanceElement = document.getElementById("chance");
+  let StateElement = document.getElementById("weatherstate");
   temperatureElem.innerHTML = Math.round(response.data.main.temp);
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 function testname(event) {
@@ -16,8 +21,6 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
-
-search("Amsterdam");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", testname);
