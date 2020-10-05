@@ -4,12 +4,7 @@
   padding: 20px;
   border: 1px #3d75d7 solid;
   border-radius: 5px;
-  background-image: linear-gradient(
-    -225deg,
-    #5d9fff 0%,
-    #b8dcff 48%,
-    #6bbbff 100%
-  );
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
 }
 
 .container {
