@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-9">
           <form id="search-form">
-          <input type="search" placeholder="Please type the city name" class="form-control" id="cityname" />
+          <input type="search" placeholder="Please type the city name" class="form-control" id="cityname" autocomplete="off"/>
         </div class="col-3">
         <input type="submit" value="Search" class="btn btn-primary" />
        </form>
@@ -51,7 +51,7 @@
         <div class="col-4">
           <img src="https://c.tadst.com/gfx/w/svg/wt-18.svg" alt="Clear" class="mainimage" id="mainicon" />
           <span id="units">  </span>
-          <span class="grados">°C  </span>
+          <span class="grados">°C / °F </span>
         </div>
 
         <div class="col-4">
@@ -64,27 +64,29 @@
 
       <hr />
 
-      <div class="row">
+      <div class="row" id="forecast">
         <div class="col-3">
           <div class="day1">
-            Sunday
+            Sunday 15°C
             <img src="https://c.tadst.com/gfx/w/svg/wt-33.svg" alt="day4" class="imageone" />
           </div>
         </div>
         <div class="col-3">
-          Monday
+          Monday 12°C
           <img src="https://c.tadst.com/gfx/w/svg/wt-33.svg" alt="day4" class="imagetwo" />
         </div>
 
         <div class="col-3">
-          Tuesday
+          Tuesday 11°C
           <img src="https://c.tadst.com/gfx/w//svg/wt-1.svg" alt="day4" class="imagetree" />
         </div>
         <div class="col-3">
-          Wednesday
+          Wednesday 10°C
           <img src="https://c.tadst.com/gfx/w//svg/wt-1.svg" alt="day4" class="image4" />
         </div>
       </div>
+
+      
 
       <small>
         <a href="https://github.com/Vannecj4/Weather-App" target="_blank">Open-source code</a>
