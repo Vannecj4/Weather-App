@@ -44,8 +44,19 @@ function showTemperature(response) {
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
   console.log(response.data.list[0]);
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = `
+  <div class="col-3">
+          <h3>
+            12:00
+          </h3>
+          <img src="" alt="day1" id="day1">
+          <div class="weather-forecast-temp">
+          <strong> 16</strong>15
+          </div>
+        </div>`;
 }
 
 function search(city) {
